@@ -1,0 +1,47 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-04T19:07:58.818Z",
+        "reason": "Claude: Tomás pidió la estética neón/tech del TikTok de referencia (SynapseX, synex) el 2026-11-04"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist mono",
+        "createdAt": "2026-11-04T19:07:59.103Z",
+        "reason": "Claude: Tomás pidió la estética neón/tech del TikTok de referencia (SynapseX, synex) el 2026-11-04"
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-11-04T19:07:59.387Z",
+        "reason": "Claude: Tomás pidió la estética neón/tech del TikTok de referencia (SynapseX, synex) el 2026-11-04"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-04T19:08:07.496Z",
+        "reason": "Claude: Tomás pidió la estética neón/tech del TikTok de referencia (SynapseX, synex) el 2026-11-04"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-04T19:25:10.189Z",
+        "reason": "Claude: falsos positivos verificados; las secciones tienen 96-168px de padding (borde de separación arriba), y .wall/.viz son dibujos donde el relleno cubre el contenedor a propósito"
+      }
+    ]
+  }
+}
