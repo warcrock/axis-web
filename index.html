@@ -1,15 +1,54 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Axis · Sistemas y automatizaciones para pymes</title>
-<meta name="description" content="Axis programa sistemas a medida y automatizaciones para pymes y comercios de Cuyo: listas de precios online, cotizadores, turnos y webs. Te mostramos la tuya funcionando antes de que pagues nada.">
+<title>Axis · Sistemas y automatizaciones para pymes de San Rafael</title>
+<meta name="description" content="Herramientas a medida para pymes de San Rafael, Mendoza y Cuyo: listas de precios online, pedidos que llegan armados al WhatsApp, turnos y tareas que se hacen solas. Mirá la tuya funcionando antes de pagar.">
 <meta name="theme-color" content="#060807">
+<link rel="canonical" href="https://warcrock.github.io/axis-web/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Axis">
+<meta property="og:url" content="https://warcrock.github.io/axis-web/">
+<meta property="og:title" content="Axis · Tu negocio, en automático">
+<meta property="og:description" content="Sistemas y automatizaciones para pymes de San Rafael y Cuyo. Mirá la tuya funcionando, con tu marca, antes de pagar.">
+<meta property="og:image" content="https://warcrock.github.io/axis-web/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axis: tu negocio, en automático. Sistemas a medida para pymes de San Rafael, Mendoza.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Axis · Tu negocio, en automático">
+<meta name="twitter:description" content="Sistemas y automatizaciones para pymes de San Rafael y Cuyo. Mirá la tuya funcionando antes de pagar.">
+<meta name="twitter:image" content="https://warcrock.github.io/axis-web/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Axis",
+  "description": "Sistemas a medida y automatizaciones para pymes: listas de precios online, pedidos por WhatsApp, turnos, cotizadores y webs.",
+  "url": "https://warcrock.github.io/axis-web/",
+  "image": "https://warcrock.github.io/axis-web/og.png",
+  "logo": "https://warcrock.github.io/axis-web/apple-touch-icon.png",
+  "email": "axispymes@gmail.com",
+  "telephone": "+54 9 260 467-0292",
+  "address": { "@type": "PostalAddress", "addressLocality": "San Rafael", "addressRegion": "Mendoza", "addressCountry": "AR" },
+  "areaServed": [
+    { "@type": "City", "name": "San Rafael, Mendoza" },
+    { "@type": "AdministrativeArea", "name": "Mendoza" },
+    { "@type": "AdministrativeArea", "name": "San Juan" },
+    { "@type": "AdministrativeArea", "name": "La Rioja" }
+  ],
+  "founder": { "@type": "Person", "name": "Tomás García" },
+  "sameAs": ["https://www.instagram.com/axis.pymes/", "https://www.tiktok.com/@axis.pymes"]
+}
+</script>
 <link rel="stylesheet" href="styles.css">
 <script>(function(){var d=document.documentElement,m;d.classList.add('js');try{m=localStorage.getItem('axis-motion')}catch(e){}d.dataset.motion=m||(matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'on')})()</script>
 </head>
@@ -37,9 +76,8 @@
 
 <section class="hero" id="inicio">
   <div class="hero-text">
-    <p class="status mono"><span class="pulse" aria-hidden="true"></span>Sistemas a medida · San Rafael, San Juan, La Rioja</p>
     <h1 class="mono" data-scramble>Tu negocio, <em>en automático.</em></h1>
-    <p class="lead">Programamos sistemas y automatizaciones para pymes y comercios de Cuyo: listas de precios online, cotizadores, turnos y webs. Te mostramos el tuyo funcionando, con tu marca, antes de que pagues nada.</p>
+    <p class="lead">Programamos sistemas y automatizaciones para pymes y comercios de San Rafael y todo Cuyo: listas de precios online, cotizadores, turnos y webs. Te mostramos el tuyo funcionando, con tu marca, antes de que pagues nada.</p>
     <div class="actions">
       <a class="btn" href="https://wa.me/5492604670292?text=Hola%2C%20vi%20la%20web%20de%20Axis%20y%20quiero%20ver%20la%20m%C3%ADa" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
       <a class="btn-ghost" href="#herramienta">Probá el tuyo <span aria-hidden="true">↓</span></a>
@@ -49,20 +87,19 @@
   <figure class="graph" role="img" aria-label="Diagrama: consultas, PDFs viejos y planillas entran a Axis y salen como pedidos armados, informes automáticos y turnos confirmados.">
     <canvas aria-hidden="true"></canvas>
     <span class="node in n1" data-in>¿me pasás precio?</span>
-    <span class="node in n2" data-in>lista_precios_VIEJA.pdf</span>
-    <span class="node in n3" data-in>planilla_final_v3.xlsx</span>
-    <span class="node in n4" data-in>WhatsApp · 14 sin leer</span>
+    <span class="node in n2" data-in><span class="lg">lista_precios_VIEJA.pdf</span><span class="sm">lista_VIEJA.pdf</span></span>
+    <span class="node in n3" data-in><span class="lg">planilla_final_v3.xlsx</span><span class="sm">planilla_v3.xlsx</span></span>
+    <span class="node in n4" data-in><span class="lg">WhatsApp · 14 sin leer</span><span class="sm">14 sin leer</span></span>
     <div class="core" data-core><span class="core-ring"></span><span class="core-label mono">AXIS</span></div>
-    <div class="node out o1" data-out><b>Pedido armado</b><span>7 bultos · al WhatsApp</span><i class="ok" aria-hidden="true"></i></div>
-    <div class="node out o2" data-out><b>Informe del mes</b><span>se envía solo · 08:00</span><i class="ok" aria-hidden="true"></i></div>
-    <div class="node out o3" data-out><b>Turno confirmado</b><span>viernes · 11:30</span><i class="ok" aria-hidden="true"></i></div>
-    <figcaption class="graph-cap mono"><span>entrada</span><span>núcleo</span><span>salida</span></figcaption>
+    <div class="node out o1" data-out><b>Pedido armado</b><span><span class="lg">7 bultos · al WhatsApp</span><span class="sm">7 bultos</span></span><i class="ok" aria-hidden="true"></i></div>
+    <div class="node out o2" data-out><b>Informe del mes</b><span><span class="lg">se envía solo · 08:00</span><span class="sm">sale solo</span></span><i class="ok" aria-hidden="true"></i></div>
+    <div class="node out o3" data-out><b>Turno confirmado</b><span><span class="lg">viernes · 11:30</span><span class="sm">vie · 11:30</span></span><i class="ok" aria-hidden="true"></i></div>
+    <figcaption class="graph-cap"><span>Lo que llega</span><span>Tu sistema</span><span>Lo que sale</span></figcaption>
   </figure>
 </section>
 
 <section class="build" id="herramienta" aria-labelledby="t-herramienta">
   <div class="sec-head">
-    <p class="kicker mono" data-scramble>Probala</p>
     <h2 id="t-herramienta">Escribí tu negocio. Mirá tu sistema.</h2>
     <p>Así trabajamos: antes de hablar de plata, armamos la herramienta con tu marca y la ves funcionando. Escribí el nombre, elegí el rubro y tu color. El celular se puede tocar.</p>
   </div>
@@ -72,7 +109,7 @@
       <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span class="mono">axis — nueva herramienta</span></div>
       <div class="term-body mono">
         <label class="prompt" for="nombre"><span class="ps">$</span> axis crear --negocio</label>
-        <input id="nombre" class="mono" type="text" maxlength="28" autocomplete="organization" placeholder="Distribuidora del Valle" spellcheck="false">
+        <input id="nombre" class="mono" type="text" maxlength="28" autocomplete="organization" placeholder="el nombre de tu negocio" spellcheck="false" aria-label="Nombre de tu negocio" enterkeyhint="done">
         <p class="prompt-sub" id="rubro-label">--rubro</p>
         <div class="tabs" role="tablist" aria-labelledby="rubro-label">
           <button role="tab" aria-selected="true" data-tab="lista" id="tab-lista" aria-controls="tool-lista">mayorista</button>
@@ -165,7 +202,6 @@
 
 <section class="work" id="proyectos" aria-labelledby="t-proyectos">
   <div class="sec-head">
-    <p class="kicker mono" data-scramble>Proyectos</p>
     <h2 id="t-proyectos">Herramientas que ya armamos.</h2>
     <p>Cada una nació del problema de un negocio real y ninguna es una plantilla: se hacen con los productos, los precios y la marca de cada uno.</p>
   </div>
@@ -186,9 +222,9 @@
         </div>
       </div>
       <div class="proj-txt">
-        <p class="proj-tag mono">Mayoristas · piloto en curso</p>
         <h3>Catálogo mayorista con cuentas</h3>
         <p>Cada cliente entra con su cuenta, ve el stock y su lista de precios, y el pedido llega listo para cargarlo como presupuesto.</p>
+        <p class="proj-tag">Mayoristas · piloto en curso</p>
         <ul class="feats mono"><li>stock en vivo</li><li>listas por cliente</li><li>pedido → presupuesto</li></ul>
       </div>
     </article>
@@ -205,9 +241,9 @@
         <p class="nudge mono">aviso de vencimiento → Juan P.</p>
       </div>
       <div class="proj-txt">
-        <p class="proj-tag mono">Gimnasios · Cuota al Día</p>
         <h3>Socios y cuotas, de un vistazo</h3>
         <p>Quién pagó, a quién le vence hoy y quién debe. Los avisos de vencimiento salen solos.</p>
+        <p class="proj-tag">Gimnasios · Cuota al Día</p>
         <ul class="feats mono"><li>socios</li><li>cuotas</li><li>rutinas</li></ul>
       </div>
     </article>
@@ -218,44 +254,48 @@
         <div class="calc"><p class="mono">10,9 m² × 2 manos</p><b class="mono">2,2 L</b><p>→ lata de 4 L</p></div>
       </div>
       <div class="proj-txt">
-        <p class="proj-tag mono">Pinturerías</p>
         <h3>Calculadora de pintura</h3>
         <p>El cliente pone las medidas de la pared y sabe cuántos litros y qué lata llevar, con los productos del local.</p>
+        <p class="proj-tag">Pinturerías</p>
         <ul class="feats mono"><li>medidas</li><li>rendimiento real</li><li>lata justa</li></ul>
       </div>
     </article>
 
     <article class="proj" data-reveal>
       <div class="viz viz-pizza" aria-hidden="true">
-        <svg class="pizza" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="92" class="crust"/><circle cx="100" cy="100" r="80" class="cheese"/>
-          <g class="half-l"><circle cx="62" cy="70" r="7"/><circle cx="48" cy="112" r="7"/><circle cx="74" cy="140" r="7"/><circle cx="80" cy="100" r="6"/><circle cx="60" cy="160" r="5"/></g>
-          <g class="tp t1"><circle cx="128" cy="62" r="13"/><circle cx="150" cy="104" r="13"/><circle cx="122" cy="140" r="13"/></g>
-          <g class="tp t2"><circle cx="126" cy="66" r="11"/><circle cx="148" cy="96" r="11"/><circle cx="128" cy="126" r="11"/><circle cx="148" cy="148" r="9"/></g>
-          <g class="tp t3"><rect x="118" y="58" width="22" height="9" rx="4"/><rect x="138" y="92" width="22" height="9" rx="4"/><rect x="116" y="118" width="22" height="9" rx="4"/><rect x="132" y="148" width="20" height="9" rx="4"/></g>
-          <line x1="100" y1="10" x2="100" y2="190" class="cut"/>
-        </svg>
-        <div class="halves mono"><span>½ Muzzarella</span><span class="rot"><i>½ Napolitana</i><i>½ Fugazzeta</i><i>½ Calabresa</i></span></div>
+        <div class="pz">
+          <p class="pz-h"><b>Armá tu pizza</b><span class="mono">grande · 8 porciones</span></p>
+          <div class="pz-body">
+            <div class="pz-disc"><span class="pz-l"></span><span class="pz-r"><i></i><i></i><i></i></span></div>
+            <ul class="pz-halves">
+              <li><small>Mitad 1</small><b>Muzzarella</b></li>
+              <li class="on"><small>Mitad 2</small><b class="rot"><i>Napolitana</i><i>Fugazzeta</i><i>Calabresa</i></b></li>
+            </ul>
+          </div>
+          <p class="pz-btn">Pedir por WhatsApp</p>
+        </div>
       </div>
       <div class="proj-txt">
-        <p class="proj-tag mono">Pizzerías</p>
         <h3>Armador mitad y mitad</h3>
         <p>Se arma la pizza por mitades con la carta real, y el pedido llega escrito al WhatsApp del local.</p>
+        <p class="proj-tag">Pizzerías</p>
         <ul class="feats mono"><li>carta real</li><li>por mitades</li><li>pedido escrito</li></ul>
       </div>
     </article>
 
     <article class="proj" data-reveal>
       <div class="viz viz-nails" aria-hidden="true">
-        <div class="hand"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="sw"><i></i><i></i><i></i><i></i></div>
-        <p class="slot mono">jue 11:30 · semipermanente ✓</p>
-        <p class="stamps" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="new"></i><i></i></p>
+        <div class="nl">
+          <p class="pz-h"><b>Probador de color</b><span class="mono">semipermanente</span></p>
+          <div class="nl-pick"><span class="nl-tip"></span><div class="sw"><i></i><i></i><i></i><i></i></div></div>
+          <p class="nl-slot"><span class="mono">jue 11:30</span><b>Reservar</b></p>
+          <p class="stamps"><span>Tarjeta</span><i class="on"></i><i class="on"></i><i class="on"></i><i class="new"></i><i></i></p>
+        </div>
       </div>
       <div class="proj-txt">
-        <p class="proj-tag mono">Uñas y estética</p>
         <h3>Turnos + probador de color</h3>
         <p>Elegís el color sobre la mano, reservás el horario y sumás un sello en tu tarjeta de cliente.</p>
+        <p class="proj-tag">Uñas y estética</p>
         <ul class="feats mono"><li>probador</li><li>turnos</li><li>tarjeta de sellos</li></ul>
       </div>
     </article>
@@ -264,9 +304,8 @@
 
 <section class="auto" id="automatizacion" aria-labelledby="t-auto">
   <div class="sec-head">
-    <p class="kicker mono" data-scramble>Automatización</p>
-    <h2 id="t-auto">Tareas que se hacen solas, mientras atendés.</h2>
-    <p>Conectamos tu mail, tus planillas y tu sistema para que lo repetitivo pase sin que nadie lo toque. Elegí un ejemplo y miralo andar.</p>
+    <h2 id="t-auto">Tareas que se hacen solas.</h2>
+    <p>Mientras atendés, conectamos tu mail, tus planillas y tu sistema para que lo repetitivo pase sin que nadie lo toque. Elegí un ejemplo y miralo andar.</p>
   </div>
   <div class="flows" role="group" aria-label="Ejemplo de flujo">
     <button type="button" data-flow="pedido" aria-pressed="true">pedido por mail</button>
@@ -293,30 +332,25 @@
 
 <section class="flow" id="como-trabajamos" aria-labelledby="t-flow">
   <div class="sec-head">
-    <p class="kicker mono" data-scramble>Cómo trabajamos</p>
     <h2 id="t-flow">Del primer mensaje al sistema andando.</h2>
   </div>
   <ol class="stages">
     <li class="stage">
-      <span class="idx mono">01</span>
       <h3>Miramos</h3>
       <p>Vemos tu negocio desde afuera, como un cliente: tu web, tu ficha de Google, cómo se pide y cuánto tarda la respuesta.</p>
       <span class="io mono">entrada → tu negocio</span>
     </li>
     <li class="stage">
-      <span class="idx mono">02</span>
       <h3>Armamos</h3>
-      <p>Hacemos la herramienta con tu marca y tus productos. Te llega en un PDF, con lo que vimos y la solución.</p>
-      <span class="io mono">salida → propuesta en PDF</span>
+      <p>Con lo que charlamos, hacemos la herramienta con tu marca y tus productos. No es una plantilla: es la tuya.</p>
+      <span class="io mono">salida → tu herramienta</span>
     </li>
     <li class="stage">
-      <span class="idx mono">03</span>
       <h3>Mostramos</h3>
       <p>Quince minutos por videollamada para verla funcionando. Después te pasamos el presupuesto por escrito, sin compromiso.</p>
       <span class="io mono">salida → presupuesto por escrito</span>
     </li>
     <li class="stage">
-      <span class="idx mono">04</span>
       <h3>Cuidamos</h3>
       <p>La instalamos con tus datos reales y la mantenemos: precios al día, arreglos y soporte por WhatsApp, todos los meses.</p>
       <span class="io mono">en marcha → todos los meses</span>
@@ -325,9 +359,15 @@
 </section>
 
 <section class="faq" id="preguntas" aria-labelledby="t-preguntas">
-  <div class="sec-head">
-    <p class="kicker mono" data-scramble>Preguntas</p>
+  <div class="faq-side">
     <h2 id="t-preguntas">Lo que nos preguntan.</h2>
+    <p>¿Te quedó otra? Escribinos por donde te quede cómodo y te contestamos en el día.</p>
+    <ul class="channels">
+      <li><a href="https://wa.me/5492604670292?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20Axis" target="_blank" rel="noopener"><span>WhatsApp</span><b>260 467-0292</b></a></li>
+      <li><a href="https://www.instagram.com/axis.pymes/" target="_blank" rel="noopener"><span>Instagram</span><b>@axis.pymes</b></a></li>
+      <li><a href="https://www.tiktok.com/@axis.pymes" target="_blank" rel="noopener"><span>TikTok</span><b>@axis.pymes</b></a></li>
+      <li><a href="mailto:axispymes@gmail.com?subject=Consulta%20desde%20la%20web"><span>Mail</span><b>axispymes@gmail.com</b></a></li>
+    </ul>
   </div>
   <div class="qs">
     <details>
@@ -367,12 +407,12 @@
 
 <footer class="foot">
   <div class="foot-cols">
-    <ul><li class="mono">Dónde</li><li>San Rafael, Mendoza</li><li>San Juan</li><li>La Rioja</li></ul>
-    <ul><li class="mono">Contacto</li><li><a href="https://wa.me/5492604670292" target="_blank" rel="noopener">+54 9 260 467-0292</a></li><li><a href="mailto:garciatomasdev@gmail.com">garciatomasdev@gmail.com</a></li></ul>
-    <ul><li class="mono">Secciones</li><li><a href="#herramienta">Probala</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#automatizacion">Automatización</a></li><li><a href="#como-trabajamos">Cómo trabajamos</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
+    <ul><li>Dónde</li><li>San Rafael, Mendoza</li><li>San Juan</li><li>La Rioja</li></ul>
+    <ul><li>Contacto</li><li><a href="https://wa.me/5492604670292" target="_blank" rel="noopener">WhatsApp +54 9 260 467-0292</a></li><li><a href="mailto:axispymes@gmail.com">axispymes@gmail.com</a></li><li><a href="https://www.instagram.com/axis.pymes/" target="_blank" rel="noopener">Instagram @axis.pymes</a></li><li><a href="https://www.tiktok.com/@axis.pymes" target="_blank" rel="noopener">TikTok @axis.pymes</a></li></ul>
+    <ul><li>Secciones</li><li><a href="#herramienta">Probala</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#automatizacion">Automatización</a></li><li><a href="#como-trabajamos">Cómo trabajamos</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
   </div>
   <p class="foot-word" aria-hidden="true">AXIS</p>
-  <p class="legal mono">© 2026 Axis · Sistemas y automatizaciones para pymes de Cuyo</p>
+  <p class="legal">© 2026 Axis · Sistemas y automatizaciones para pymes de San Rafael y Cuyo</p>
 </footer>
 
 <script src="main.js" defer></script>

@@ -63,6 +63,7 @@ const graph = (() => {
   const ins = [...box.querySelectorAll('[data-in]')];
   const outs = [...box.querySelectorAll('[data-out]')];
   const core = box.querySelector('[data-core]');
+  const cap = box.querySelector('.graph-cap'), caps = [...cap.children];
   const vertical = matchMedia('(max-width: 720px)');
   let W = 0, H = 0, inPaths = [], outPaths = [], packets = [], raf = 0, last = 0, spawn = 0, visible = true;
 
@@ -89,6 +90,12 @@ const graph = (() => {
     const c = rel(core), mid = { x: c.cx, y: c.cy };
     inPaths = ins.map((el) => { const r = rel(el); return curve(vertical.matches ? { x: r.cx, y: r.b } : { x: r.r, y: r.cy }, mid); });
     outPaths = outs.map((el) => { const r = rel(el); return curve(mid, vertical.matches ? { x: r.cx, y: r.t } : { x: r.l, y: r.cy }); });
+    if (!vertical.matches) {
+      const medio = (els) => els.reduce((s, el) => s + rel(el).cx, 0) / els.length;
+      const fondo = Math.max(...[...ins, ...outs].map((el) => rel(el).b));
+      cap.style.setProperty('--cap-y', `${fondo + 24}px`);
+      [medio(ins), c.cx, medio(outs)].forEach((x, i) => { caps[i].style.left = `${x}px`; });
+    }
   }
 
   function stroke(p, color, dash) {
@@ -177,7 +184,8 @@ function pintarLog(animar) {
   const hex = document.createElement('b'); hex.dataset.hex = ''; hex.textContent = color;
   const url = document.createElement('b');
   const s = document.createElement('span'); s.dataset.slug = '';
-  url.append(s, `.com.ar${ruta}`);
+  url.append(s, '.com.ar');
+  if (ruta) url.append(document.createElement('wbr'), ruta);
   const items = [linea(['marca: ', marca]), linea(['color: ', hex]), ...lines.map((t) => linea([t])), linea(['listo en ', url], true)];
   log.replaceChildren(...items);
   ponerNombre();
@@ -192,7 +200,8 @@ function ponerNombre() {
   document.querySelectorAll('[data-name]').forEach((el) => { el.textContent = nombre(); });
   document.querySelectorAll('[data-slug]').forEach((el) => { el.textContent = slug(v); });
   show.querySelector('[data-ini]').textContent = ini.toUpperCase();
-  const txt = v ? `Hola, quiero ver la herramienta para ${v}` : 'Hola, quiero ver la herramienta para mi negocio';
+  const modulo = LOGS[tool].lines[0].replace('módulo: ', '');
+  const txt = `Hola, quiero ver la herramienta para ${v || 'mi negocio'} (${modulo})`;
   pedir.href = `https://wa.me/5492604670292?text=${encodeURIComponent(txt)}`;
   resumen();
 }
@@ -204,9 +213,19 @@ function luz(hex) {
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 const swatches = [...document.querySelectorAll('[data-color]')];
+swatches.forEach((sw, i) => {
+  sw.tabIndex = i === 0 ? 0 : -1;
+  sw.addEventListener('keydown', (e) => {
+    const d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+    if (!d) return;
+    e.preventDefault();
+    const sig = swatches[(i + d + swatches.length) % swatches.length];
+    sig.focus(); sig.click();
+  });
+});
 swatches.forEach((sw) => sw.addEventListener('click', () => {
   color = sw.dataset.color;
-  swatches.forEach((x) => x.setAttribute('aria-checked', x === sw));
+  swatches.forEach((x) => { x.setAttribute('aria-checked', x === sw); x.tabIndex = x === sw ? 0 : -1; });
   const L = luz(color);
   show.style.setProperty('--brand', color);
   show.style.setProperty('--on-brand', 1.05 / (L + 0.05) > (L + 0.05) / 0.056 ? '#FFFFFF' : '#0A1400');
@@ -364,7 +383,7 @@ const auto = (() => {
   const track = sec.querySelector('.pipe-track'), fill = sec.querySelector('.pipe-fill'), pkt = sec.querySelector('.pkt');
   const alog = sec.querySelector('.alog');
   const botones = [...sec.querySelectorAll('[data-flow]')];
-  let flow = 'pedido', paso = 0, timer = 0, visible = false, centros = [], vertical = false;
+  let flow = 'pedido', paso = 0, timer = 0, llegada = 0, visible = false, centros = [], vertical = false;
 
   const hhmm = (i) => { const [h, m] = FLOWS[flow].hora; const t = h * 60 + m + Math.floor(i / 2); return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`; };
   function medir() {
@@ -386,8 +405,11 @@ const auto = (() => {
     const p = Math.min(k, nodos.length - 1) / (nodos.length - 1);
     fill.style.transform = vertical ? `scaleY(${p})` : `scaleX(${p})`;
     const c = centros[Math.min(k, nodos.length - 1)];
+    const viaja = k > 0 && k < nodos.length && motion();
     pkt.style.transform = `translate(${c.x - 7}px, ${c.y - 7}px)`;
-    pkt.style.opacity = k >= nodos.length ? 0 : 1;
+    pkt.style.opacity = viaja ? 1 : 0;
+    clearTimeout(llegada);
+    if (viaja) llegada = setTimeout(() => { pkt.style.opacity = 0; }, 700);
   }
   function renglon(i, animar) {
     const li = document.createElement('li');

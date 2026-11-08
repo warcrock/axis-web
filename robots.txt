@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://warcrock.github.io/axis-web/sitemap.xml
